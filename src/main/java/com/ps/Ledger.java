@@ -8,7 +8,7 @@ public class Ledger {
         Scanner scanner = new Scanner(System.in);
         String ledgerInput;
 
-        System.out.println("\nWelcome to your Ledger!");
+        System.out.println("\nWelcome to your Accounts Ledger!");
         System.out.println("What would you like to do?");
 
         do {
@@ -24,15 +24,19 @@ public class Ledger {
             switch (ledgerInput){
                 case "A":
                     // Display all entries, showing only the newest entries first
+                    System.out.println("Displaying all deposits and payments:");
                     break;
                 case "D":
                     // Deposits - Display only deposits into account
+                    System.out.println("Displaying all deposits:");
                     break;
                 case "P":
                     // Displays only the negative entries/Payments from account
+                    System.out.println("Displaying all payments:");
                     break;
                 case "R":
                     // Reports
+                    System.out.println("You have selected 'View Reports'.");
                     Reports.loadReports();
                     break;
                 case "H":

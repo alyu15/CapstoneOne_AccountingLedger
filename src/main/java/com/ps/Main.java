@@ -10,7 +10,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to our Accounting Ledger program!");
+        System.out.println("\nWelcome to our Accounting Ledger program!");
             System.out.println("How may we help you?");
 
         String homeInput;
