@@ -1,0 +1,13 @@
+2023-04-15|10:13:25|Ergonomic Keyboard|Amazon|-89.50
+2023-04-15|11:15:00|Invoice 1001 paid|Joe|1500.00
+2023-06-01|14:31:23|Haircut|Snips|-32.50
+2023-08-03|13:54:41|Groceries|Hmart|-120.45
+2023-10-23|17:32:10|Dinner with friends|Bella Italia|-80.90
+2023-11-15|09:22:04|Table sold|eBay|450.38
+2023-12-04|12:01:45|Salary deposit|Company Incorporated|2000.00
+2023-12-17|08:42:27|Bahamas Trip|Famous Airlines|-750.25
+2024-02-18|16:25:39|Movie tickets|Cineview|-58.15
+2024-03-24|11:02:47|Salary deposit|Company Incorporated|1700.00
+2024-03-28|14:15:16|Groceries|Hmart|-79.60
+2024-04-12|21:06:43|New tv|Bestmart|-360.75
+2024-04-27|09:15:28|Bonus deposit|Company Incorporated|550.50
