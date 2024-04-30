@@ -19,8 +19,7 @@ public class Ledger {
         System.out.println("What would you like to do?");
 
         do {
-            System.out.println("\nWelcome to your Accounts Ledger!");
-            System.out.println("What would you like to do?");
+
             System.out.println("\nPlease select one of the following options:");
                 System.out.println("\t(A) Display all entries");
                 System.out.println("\t(D) View Deposits");
@@ -96,7 +95,7 @@ public class Ledger {
 
             Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
 
-            System.out.printf("%s  %s    '%s',  Vendor: %s,  Amount: %.2f\n",
+            System.out.printf("%s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
                     tempTransactions.getDate(),
                     tempTransactions.getTime(),
                     tempTransactions.getDescription(),

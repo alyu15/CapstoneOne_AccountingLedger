@@ -9,7 +9,6 @@ public class Deposit {
 
     public static void addDeposit(){
 
-        // Prompt user for deposit information
         Scanner scanner = new Scanner(System.in);
         LocalDateTime currentDateTime = LocalDateTime.now();
         String reason;
@@ -25,21 +24,21 @@ public class Deposit {
         System.out.println("Please enter in the amount you would like to deposit:");
             depositAmount = scanner.nextFloat();
 
-        // Save info to csv file
 
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String formattedDate = currentDateTime.format(dateFormatter);
+            String formattedDate = currentDateTime.format(dateFormatter);
 
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-        String formattedTime = currentDateTime.format(timeFormatter);
+            String formattedTime = currentDateTime.format(timeFormatter);
 
         try {
 
             BufferedWriter buffWriter = new BufferedWriter(new FileWriter("transactions.txt", true));
 
-            String data = "\n" + formattedDate + "|" + formattedTime + "|" + reason + "|" + vendorName + "|" + depositAmount;
+            String data = "\n" + formattedDate + "|" + formattedTime + "|" + reason
+                    + "|" + vendorName + "|" + depositAmount;
 
-            buffWriter.write(data.trim());
+            buffWriter.write(data);
             buffWriter.close();
         }
         catch (IOException e) {
