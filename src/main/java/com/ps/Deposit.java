@@ -1,6 +1,8 @@
 package com.ps;
 
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Deposit {
@@ -9,6 +11,7 @@ public class Deposit {
 
         // Prompt user for deposit information
         Scanner scanner = new Scanner(System.in);
+        LocalDateTime currentDateTime = LocalDateTime.now();
         String reason;
         String vendorName;
         float depositAmount;
@@ -24,11 +27,24 @@ public class Deposit {
 
         // Save info to csv file
 
-        try {
-            BufferedWriter buffWriter = new BufferedWriter(new FileWriter("transactions.txt"));
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = currentDateTime.format(dateFormatter);
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String formattedTime = currentDateTime.format(timeFormatter);
+
+        try {
+
+            BufferedWriter buffWriter = new BufferedWriter(new FileWriter("transactions.txt", true));
+
+            String data = "\n" + formattedDate + "|" + formattedTime + "|" + reason + "|" + vendorName + "|" + depositAmount;
+
+            buffWriter.write(data.trim());
+            buffWriter.close();
+        }
+        catch (IOException e) {
+            System.out.println("Error!!");
+            e.printStackTrace();
         }
 
         System.out.println("You have successfully made a deposit!");
