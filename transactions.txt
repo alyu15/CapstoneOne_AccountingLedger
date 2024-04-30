@@ -1,5 +1,5 @@
 2023-04-15|10:13:25|Ergonomic Keyboard|Amazon|-89.50
-2023-04-15|11:15:00|Invoice 1001 paid|Joe|1500.00
+2023-04-15|11:15:01|Invoice 1001 paid|Joe|1500.00
 2023-06-01|14:31:23|Haircut|Snips|-32.50
 2023-08-03|13:54:41|Groceries|Hmart|-120.45
 2023-10-23|17:32:10|Dinner with friends|Yumyums|-80.90

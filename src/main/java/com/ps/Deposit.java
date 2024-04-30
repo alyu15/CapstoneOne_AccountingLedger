@@ -1,7 +1,8 @@
 package com.ps;
 
 import java.io.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -10,33 +11,32 @@ public class Deposit {
     public static void addDeposit(){
 
         Scanner scanner = new Scanner(System.in);
-        LocalDateTime currentDateTime = LocalDateTime.now();
         String reason;
         String vendorName;
+        String nameEntry;
         float depositAmount;
+        LocalDate dateNow = LocalDate.now();
+        LocalTime timeNow = LocalTime.now();
 
         System.out.println("\nPlease enter in the reason for this deposit:");
             reason = scanner.nextLine();
 
         System.out.println("Please enter in the vendor name:");
             vendorName = scanner.nextLine();
+            nameEntry = vendorName.substring(0,1).toUpperCase()+vendorName.substring(1);
 
         System.out.println("Please enter in the amount you would like to deposit:");
             depositAmount = scanner.nextFloat();
 
-
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-            String formattedDate = currentDateTime.format(dateFormatter);
-
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-            String formattedTime = currentDateTime.format(timeFormatter);
+            String formattedTime = timeNow.format(timeFormatter);
 
         try {
 
             BufferedWriter buffWriter = new BufferedWriter(new FileWriter("transactions.txt", true));
 
-            String data = "\n" + formattedDate + "|" + formattedTime + "|" + reason
-                    + "|" + vendorName + "|" + depositAmount;
+            String data = "\n" + dateNow + "|" + formattedTime + "|" + reason
+                    + "|" + nameEntry + "|" + depositAmount;
 
             buffWriter.write(data);
             buffWriter.close();

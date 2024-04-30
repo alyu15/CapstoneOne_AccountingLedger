@@ -11,17 +11,14 @@ import java.util.Scanner;
 import static com.ps.Ledger.transactions;
 
 public class Reports {
+    static Scanner scanner = new Scanner(System.in);
 
     public static void loadReports(){
-
-        // Allows the user to run pre-defined reports or run a custom search
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("\nWelcome to your Accounts Reports!");
         System.out.println("What would you like to do?");
 
         int reportsInput;
-        String vendorInput;
 
         do {
             System.out.println("\nPlease select one of the following Reports you would like to view:");
@@ -54,17 +51,10 @@ public class Reports {
                     break;
 
                 case 5:
-                // Search by vendor
-                    // Prompts user for vendor name
-                    System.out.println("Please enter in the vendor name:");
-                    vendorInput = scanner.nextLine().trim();
-
-                    // Displays all entries for that vendor
                     searchVendor();
                     break;
 
                 case 0:
-                // Back to ledger page
                     System.out.println("Returning to Ledger...");
                     break;
 
@@ -118,7 +108,6 @@ public class Reports {
                         tempTransactions.getAmount());
             }
         }
-
     }
 
     public static void previousMonth() {
@@ -151,7 +140,6 @@ public class Reports {
                         tempTransactions.getAmount());
             }
         }
-
     }
 
     public static void yearToDate() {
@@ -219,6 +207,34 @@ public class Reports {
     }
 
     public static void searchVendor() {
+
+        String vendorInput;
+
+        System.out.println("Please enter in the vendor name:");
+        vendorInput = scanner.next().trim();
+        String vendorOutput = vendorInput.substring(0,1).toUpperCase()+vendorInput.substring(1);
+
+        // Displays all entries for that vendor
+        for(String vendorSearch: transactions){
+
+            String[] splitFile = vendorSearch.split("\\|");
+            LocalDate date = LocalDate.parse(splitFile[0]);
+            LocalTime time = LocalTime.parse(splitFile[1]);
+            String description = splitFile[2];
+            String vendor = splitFile[3];
+            float amount = Float.parseFloat(splitFile[4]);
+
+            Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
+
+            if (vendorOutput.equals(tempTransactions.getVendor())) {
+                System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
+                        tempTransactions.getDate(),
+                        tempTransactions.getTime(),
+                        tempTransactions.getDescription(),
+                        tempTransactions.getVendor(),
+                        tempTransactions.getAmount());
+            }
+        }
 
     }
 }
