@@ -3,6 +3,8 @@ package com.ps;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -87,8 +89,8 @@ public class Ledger {
         for (String file: transactions) {
 
             String[] splitFile = file.split("\\|");
-                String date = splitFile[0];
-                String time = splitFile[1];
+                LocalDate date = LocalDate.parse(splitFile[0]);
+                LocalTime time = LocalTime.parse(splitFile[1]);
                 String description = splitFile[2];
                 String vendor = splitFile[3];
                 float amount = Float.parseFloat(splitFile[4]);
@@ -108,8 +110,8 @@ public class Ledger {
         for (String file: transactions) {
 
             String[] splitFile = file.split("\\|");
-                String date = splitFile[0];
-                String time = splitFile[1];
+                LocalDate date = LocalDate.parse(splitFile[0]);
+                LocalTime time = LocalTime.parse(splitFile[1]);
                 String description = splitFile[2];
                 String vendor = splitFile[3];
                 float amount = Float.parseFloat(splitFile[4]);
@@ -133,8 +135,8 @@ public class Ledger {
         for (String file: transactions) {
 
             String[] splitFile = file.split("\\|");
-                String date = splitFile[0];
-                String time = splitFile[1];
+                LocalDate date = LocalDate.parse(splitFile[0]);
+                LocalTime time = LocalTime.parse(splitFile[1]);
                 String description = splitFile[2];
                 String vendor = splitFile[3];
                 float amount = Float.parseFloat(splitFile[4]);
