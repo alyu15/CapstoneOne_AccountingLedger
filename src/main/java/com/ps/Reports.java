@@ -1,6 +1,14 @@
 package com.ps;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Collections;
 import java.util.Scanner;
+
+import static com.ps.Ledger.transactions;
 
 public class Reports {
 
@@ -30,21 +38,21 @@ public class Reports {
             switch (reportsInput) {
 
                 case 1:
-                // Month to date
-                    System.out.println("Displaying Month to current date report:");
+                    monthToDate();
                     break;
+
                 case 2:
-                // Previous Month
-                    System.out.println("Displaying Previous Month report:");
+                    previousMonth();
                     break;
+
                 case 3:
-                // Year to Date
-                    System.out.println("Displaying Year to current date report");
+                    yearToDate();
                     break;
+
                 case 4:
-                // Previous Year
-                    System.out.println("Displaying Previous Year report:");
+                    previousYear();
                     break;
+
                 case 5:
                 // Search by vendor
                     // Prompts user for vendor name
@@ -52,14 +60,165 @@ public class Reports {
                     vendorInput = scanner.nextLine().trim();
 
                     // Displays all entries for that vendor
+                    searchVendor();
                     break;
+
                 case 0:
                 // Back to ledger page
                     System.out.println("Returning to Ledger...");
                     break;
+
                 default:
                     System.out.println("Command not found. Please select one of the options and try again.");
             }
         } while (reportsInput != 0);
+    }
+
+    public static void readFile() {
+
+        try {
+            BufferedReader buffReader = new BufferedReader(new FileReader("transactions.txt"));
+            String file;
+            while ((file = buffReader.readLine()) != null) {
+                transactions.add(file);
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error!!");
+            e.printStackTrace();
+        }
+    }
+
+    public static void monthToDate() {
+
+        System.out.println("           * Month to Date Report *            ");
+        System.out.println("              -- Transactions --               ");
+        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+
+        for (String transactions: transactions) {
+
+            String[] splitFile = transactions.split("\\|");
+                LocalDate date = LocalDate.parse(splitFile[0]);
+                LocalTime time = LocalTime.parse(splitFile[1]);
+                String description = splitFile[2];
+                String vendor = splitFile[3];
+                float amount = Float.parseFloat(splitFile[4]);
+
+            Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
+
+            LocalDate transactionDate = tempTransactions.getDate();
+            LocalDate currentDate = LocalDate.now();
+
+            if (transactionDate.getMonthValue() == currentDate.getMonthValue()) {
+                System.out.printf("~ %s -- %s -- %s -- %s -- $%.2f\n",
+                        tempTransactions.getDate(),
+                        tempTransactions.getTime(),
+                        tempTransactions.getDescription(),
+                        tempTransactions.getVendor(),
+                        tempTransactions.getAmount());
+            }
+        }
+
+    }
+
+    public static void previousMonth() {
+        System.out.println("           * Previous Month Report *             ");
+        System.out.println("              -- Transactions --                 ");
+        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+
+        for (String transactions: transactions) {
+
+            String[] splitFile = transactions.split("\\|");
+            LocalDate date = LocalDate.parse(splitFile[0]);
+            LocalTime time = LocalTime.parse(splitFile[1]);
+            String description = splitFile[2];
+            String vendor = splitFile[3];
+            float amount = Float.parseFloat(splitFile[4]);
+
+            Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
+
+            LocalDate currentDate = LocalDate.now();
+            LocalDate transactionDate = tempTransactions.getDate();
+            LocalDate previousMonth = currentDate.minusMonths(1);
+
+            if (previousMonth.getMonthValue() == transactionDate.getMonthValue()&&
+                    previousMonth.getYear() == transactionDate.getYear()) {
+                System.out.printf("~ %s -- %s -- %s -- %s -- $%.2f\n",
+                        tempTransactions.getDate(),
+                        tempTransactions.getTime(),
+                        tempTransactions.getDescription(),
+                        tempTransactions.getVendor(),
+                        tempTransactions.getAmount());
+            }
+        }
+
+    }
+
+    public static void yearToDate() {
+
+        System.out.println("            * Year to Date Report *              ");
+        System.out.println("              -- Transactions --                 ");
+        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+
+        for (String transactions: transactions) {
+
+            String[] splitFile = transactions.split("\\|");
+            LocalDate date = LocalDate.parse(splitFile[0]);
+            LocalTime time = LocalTime.parse(splitFile[1]);
+            String description = splitFile[2];
+            String vendor = splitFile[3];
+            float amount = Float.parseFloat(splitFile[4]);
+
+            Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
+
+            LocalDate transactionDate = tempTransactions.getDate();
+            LocalDate currentDate = LocalDate.now();
+
+            if (transactionDate.getYear() == currentDate.getYear()) {
+                System.out.printf("~ %s -- %s -- %s -- %s -- $%.2f\n",
+                        tempTransactions.getDate(),
+                        tempTransactions.getTime(),
+                        tempTransactions.getDescription(),
+                        tempTransactions.getVendor(),
+                        tempTransactions.getAmount());
+            }
+        }
+
+    }
+
+    public static void previousYear() {
+
+        System.out.println("           * Previous Year Report *              ");
+        System.out.println("              -- Transactions --                 ");
+        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+
+        for (String transactions: transactions) {
+
+            String[] splitFile = transactions.split("\\|");
+            LocalDate date = LocalDate.parse(splitFile[0]);
+            LocalTime time = LocalTime.parse(splitFile[1]);
+            String description = splitFile[2];
+            String vendor = splitFile[3];
+            float amount = Float.parseFloat(splitFile[4]);
+
+            Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
+
+            LocalDate transactionDate = tempTransactions.getDate();
+            LocalDate currentDate = LocalDate.now();
+            LocalDate previousYear = currentDate.minusYears(1);
+
+            if (previousYear.getYear() == transactionDate.getYear()) {
+                System.out.printf("~ %s -- %s -- %s -- %s -- $%.2f\n",
+                        tempTransactions.getDate(),
+                        tempTransactions.getTime(),
+                        tempTransactions.getDescription(),
+                        tempTransactions.getVendor(),
+                        tempTransactions.getAmount());
+            }
+        }
+    }
+
+    public static void searchVendor() {
+
     }
 }

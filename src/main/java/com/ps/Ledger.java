@@ -97,7 +97,7 @@ public class Ledger {
 
             Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
 
-            System.out.printf("%s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
+            System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
                     tempTransactions.getDate(),
                     tempTransactions.getTime(),
                     tempTransactions.getDescription(),
@@ -119,16 +119,14 @@ public class Ledger {
             Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
 
             if (tempTransactions.getAmount() > 0) {
-                System.out.printf("%s  %s    '%s',  Vendor: %s,  Amount: %.2f\n",
+                System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
                         tempTransactions.getDate(),
                         tempTransactions.getTime(),
                         tempTransactions.getDescription(),
                         tempTransactions.getVendor(),
                         tempTransactions.getAmount());
             }
-
         }
-
     }
 
     public static void displayPayments(){
@@ -144,17 +142,14 @@ public class Ledger {
             Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
 
             if (tempTransactions.getAmount() < 0) {
-                System.out.printf("%s  %s    '%s',  Vendor: %s,  Amount: %.2f\n",
+                System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
                         tempTransactions.getDate(),
                         tempTransactions.getTime(),
                         tempTransactions.getDescription(),
                         tempTransactions.getVendor(),
                         tempTransactions.getAmount());
             }
-
-
         }
-
     }
 }
 
