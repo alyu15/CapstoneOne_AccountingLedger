@@ -24,19 +24,23 @@ public class Main {
 
                 case "D":
                     System.out.println("You have selected 'Add Deposit'.");
-                    Deposit.addDeposit();
+                        Deposit.addDeposit();
                     break;
+
                 case "P":
                     System.out.println("You have selected 'Make a Payment (Debit)'.");
                     Payment.makeDebitPayment();
                     break;
+
                 case "L":
                     System.out.println("You have selected 'View Ledger'.");
                     Ledger.checkLedger();
                     break;
+
                 case "X":
                     System.out.println("Exiting program... Have a nice day!");
                     break;
+
                 default:
                     System.out.println("Command not found. Please select one of the options and try again.");
                     break;
