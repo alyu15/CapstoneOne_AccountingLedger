@@ -1,12 +1,9 @@
 package com.ps;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
-        ArrayList<Transactions> allTransactions = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
 

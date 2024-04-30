@@ -1,5 +1,6 @@
 package com.ps;
 
+import java.io.*;
 import java.util.Scanner;
 
 public class Deposit {
@@ -22,6 +23,13 @@ public class Deposit {
             depositAmount = scanner.nextFloat();
 
         // Save info to csv file
+
+        try {
+            BufferedWriter buffWriter = new BufferedWriter(new FileWriter("transactions.txt"));
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println("You have successfully made a deposit!");
     }
