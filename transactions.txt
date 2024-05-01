@@ -12,3 +12,4 @@
 2024-04-12|21:06:43|New tv|Amazon|-360.75
 2024-04-27|09:15:28|Bonus deposit|Salaryman|550.50
 2024-04-28|11:03:59|Groceries|Hmart|-107.85
+2024-05-01|12:57:21|Brunch with friends|Yumyums|-58.45

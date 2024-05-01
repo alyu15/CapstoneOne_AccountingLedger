@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Deposit {
 
-    public static void addDeposit(){
+    public static void makeDeposit(){
 
         Scanner scanner = new Scanner(System.in);
         String reason;
@@ -18,15 +18,16 @@ public class Deposit {
         LocalDate dateNow = LocalDate.now();
         LocalTime timeNow = LocalTime.now();
 
-        System.out.println("\nPlease enter in the reason for this deposit:");
-            reason = scanner.nextLine();
+        System.out.println("       --  Make a Deposit  --       ");
+            System.out.println("\nPlease enter in the reason for this deposit:");
+                reason = scanner.nextLine();
 
-        System.out.println("Please enter in the vendor name:");
-            vendorName = scanner.nextLine();
-            nameEntry = vendorName.substring(0,1).toUpperCase()+vendorName.substring(1);
+            System.out.println("Please enter in the vendor name:");
+                vendorName = scanner.nextLine();
+                nameEntry = vendorName.substring(0,1).toUpperCase()+vendorName.substring(1);
 
-        System.out.println("Please enter in the amount you would like to deposit:");
-            depositAmount = scanner.nextFloat();
+            System.out.println("Please enter in the amount you would like to deposit:");
+                depositAmount = scanner.nextFloat();
 
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
             String formattedTime = timeNow.format(timeFormatter);

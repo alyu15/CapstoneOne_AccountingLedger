@@ -1,11 +1,7 @@
 package com.ps;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Collections;
 import java.util.Scanner;
 
 import static com.ps.Ledger.transactions;
@@ -18,7 +14,7 @@ public class Reports {
         System.out.println("\nWelcome to your Accounts Reports!");
         System.out.println("What would you like to do?");
 
-        int reportsInput;
+        String reportsInput;
 
         do {
             System.out.println("\nPlease select one of the following Reports you would like to view:");
@@ -29,61 +25,48 @@ public class Reports {
                 System.out.println("\t(5) Search by Vendor");
                 System.out.println("\t(0) Return to Ledger");
 
-            reportsInput = scanner.nextInt();
-
+            reportsInput = scanner.nextLine().trim();
 
             switch (reportsInput) {
 
-                case 1:
+                case "1":
                     monthToDate();
                     break;
 
-                case 2:
+                case "2":
                     previousMonth();
                     break;
 
-                case 3:
+                case "3":
                     yearToDate();
                     break;
 
-                case 4:
+                case "4":
                     previousYear();
                     break;
 
-                case 5:
+                case "5":
                     searchVendor();
                     break;
 
-                case 0:
-                    System.out.println("Returning to Ledger...");
+                case "0":
+                    System.out.println("  --  Welcome back to your Accounts Ledger!  --");
                     break;
 
                 default:
-                    System.out.println("Command not found. Please select one of the options and try again.");
+                    System.out.println("       ** Command not found **");
+                    System.out.println("        - Please try again -");
             }
-        } while (reportsInput != 0);
-    }
-
-    public static void readFile() {
-
-        try {
-            BufferedReader buffReader = new BufferedReader(new FileReader("transactions.txt"));
-            String file;
-            while ((file = buffReader.readLine()) != null) {
-                transactions.add(file);
-            }
-
-        } catch (IOException e) {
-            System.out.println("Error!!");
-            e.printStackTrace();
-        }
+        } while (!reportsInput.equals("0"));
     }
 
     public static void monthToDate() {
 
-        System.out.println("           * Month to Date Report *            ");
-        System.out.println("              -- Transactions --               ");
-        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+        boolean mRecord = false;
+
+        System.out.println("             ** Month to Date Report **");
+        System.out.println("                  - Transactions -");
+        System.out.println("  * Date -- Time -- Description -- Vendor -- Amount *\n");
 
         for (String transactions: transactions) {
 
@@ -100,20 +83,25 @@ public class Reports {
             LocalDate currentDate = LocalDate.now();
 
             if (transactionDate.getMonthValue() == currentDate.getMonthValue()) {
+                mRecord = true;
                 System.out.printf("~ %s -- %s -- %s -- %s -- $%.2f\n",
                         tempTransactions.getDate(),
                         tempTransactions.getTime(),
                         tempTransactions.getDescription(),
                         tempTransactions.getVendor(),
                         tempTransactions.getAmount());
+                break;
             }
+        } if (!mRecord) {
+            System.out.println("          ** Could not find any transactions **");
+            System.out.println("                 - Please try again -");
         }
     }
 
     public static void previousMonth() {
-        System.out.println("           * Previous Month Report *             ");
-        System.out.println("              -- Transactions --                 ");
-        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+        System.out.println("              ** Previous Month Report **");
+        System.out.println("                   - Transactions -");
+        System.out.println("   * Date -- Time -- Description -- Vendor -- Amount *\n");
 
         for (String transactions: transactions) {
 
@@ -144,9 +132,9 @@ public class Reports {
 
     public static void yearToDate() {
 
-        System.out.println("            * Year to Date Report *              ");
-        System.out.println("              -- Transactions --                 ");
-        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+        System.out.println("              ** Year to Date Report **");
+        System.out.println("                  - Transactions -");
+        System.out.println("  * Date -- Time -- Description -- Vendor -- Amount *\n");
 
         for (String transactions: transactions) {
 
@@ -176,9 +164,9 @@ public class Reports {
 
     public static void previousYear() {
 
-        System.out.println("           * Previous Year Report *              ");
-        System.out.println("              -- Transactions --                 ");
-        System.out.println("Date -- Time -- Description -- Vendor -- Amount\n");
+        System.out.println("              ** Previous Year Report **");
+        System.out.println("                  - Transactions -");
+        System.out.println("  * Date -- Time -- Description -- Vendor -- Amount *\n");
 
         for (String transactions: transactions) {
 
@@ -210,12 +198,15 @@ public class Reports {
 
         String vendorInput;
 
-        System.out.println("Please enter in the vendor name:");
-        vendorInput = scanner.next().trim();
+        System.out.println("* Please enter in the vendor name:");
+        vendorInput = scanner.nextLine().trim();
+        boolean vendorFound = false;
         String vendorOutput = vendorInput.substring(0,1).toUpperCase()+vendorInput.substring(1);
 
-        // Displays all entries for that vendor
-        for(String vendorSearch: transactions){
+        System.out.println("                 --  Vendor Result  --");
+        System.out.println("  * Date -- Time -- Description -- Vendor -- Amount *\n");
+
+        for(String vendorSearch: transactions) {
 
             String[] splitFile = vendorSearch.split("\\|");
             LocalDate date = LocalDate.parse(splitFile[0]);
@@ -227,6 +218,7 @@ public class Reports {
             Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
 
             if (vendorOutput.equals(tempTransactions.getVendor())) {
+                vendorFound = true;
                 System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
                         tempTransactions.getDate(),
                         tempTransactions.getTime(),
@@ -234,6 +226,10 @@ public class Reports {
                         tempTransactions.getVendor(),
                         tempTransactions.getAmount());
             }
+        }
+        if(!vendorFound) {
+            System.out.println("              ** Could not find vendor **");
+            System.out.println("                 - Please try again -    ");
         }
 
     }

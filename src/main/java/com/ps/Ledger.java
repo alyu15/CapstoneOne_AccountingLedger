@@ -17,54 +17,50 @@ public class Ledger {
         String ledgerInput;
         readTransactions();
 
-        System.out.println("\nWelcome to your Accounts Ledger!");
-        System.out.println("What would you like to do?");
+        System.out.println("\n    *  Welcome to your Accounts Ledger!  *  ");
+        System.out.println("       -- What would you like to do? --  ");
 
         do {
 
-            System.out.println("\nPlease select one of the following options:");
-                System.out.println("\t(A) Display all entries");
-                System.out.println("\t(D) View Deposits");
-                System.out.println("\t(P) View Payments");
-                System.out.println("\t(R) View Reports");
-                System.out.println("\t(H) Return to HOME menu");
+            System.out.println("\n* Please select one of the following options:");
+                System.out.println("\t~ (A) Display all entries");
+                System.out.println("\t~ (D) View Deposits");
+                System.out.println("\t~ (P) View Payments");
+                System.out.println("\t~ (R) View Reports");
+                System.out.println("\t~ (H) Return to HOME menu");
 
             ledgerInput = scanner.next().toUpperCase().trim();
 
             switch (ledgerInput){
                 case "A":
-
-                    System.out.println("Displaying all deposits and payments:");
                         displayAll();
-
                     break;
+
                 case "D":
-                    System.out.println("Displaying all deposits:");
                         displayDeposits();
                     break;
 
                 case "P":
-                    System.out.println("Displaying all payments:");
                         displayPayments();
                     break;
 
                 case "R":
-                    System.out.println("You have selected 'View Reports'.");
                         Reports.loadReports();
                     break;
 
                 case "H":
-                    System.out.println("Returning to HOME menu...");
+                    System.out.println("           --  Welcome back!  --");
                     break;
 
                 default:
-                    System.out.println("Command not found. Please select one of the options and try again.");
+                    System.out.println("       -- Command not found --");
+                    System.out.println("        * Please try again    ");
             }
         } while (!ledgerInput.equals("H"));
 
     }
 
-    public static ArrayList<String> readTransactions() {
+    public static void readTransactions() {
 
         transactions = new ArrayList<>();
 
@@ -80,11 +76,12 @@ public class Ledger {
             System.out.println("Error!!");
             e.printStackTrace();
         }
-        return transactions;
 
     }
 
     public static void displayAll(){
+
+        System.out.println("                      --  Deposits and Payments  --\n");
 
         for (String file: transactions) {
 
@@ -107,6 +104,9 @@ public class Ledger {
     }
 
     public static void displayDeposits(){
+
+        System.out.println("                             --  Deposits  --\n");
+
         for (String file: transactions) {
 
             String[] splitFile = file.split("\\|");
@@ -130,6 +130,9 @@ public class Ledger {
     }
 
     public static void displayPayments(){
+
+        System.out.println("                            --  Payments  --\n");
+
         for (String file: transactions) {
 
             String[] splitFile = file.split("\\|");

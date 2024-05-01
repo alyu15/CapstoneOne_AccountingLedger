@@ -7,42 +7,41 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\nWelcome to our Accounting Ledger program!");
-            System.out.println("How may we help you?");
+        System.out.println("\n  *  Welcome to our Accounting Ledger program!   *");
+            System.out.println("          --  How may we help you?  --");
 
         String homeInput;
         do {
-            System.out.println("\nPlease select one of the following options: ");
-                System.out.println("\t(D) Add Deposit");
-                System.out.println("\t(P) Make a Payment (Debit)");
-                System.out.println("\t(L) View Ledger");
-                System.out.println("\t(X) Exit application");
+            System.out.println("\n* Please select one of the following options: ");
+                System.out.println("\t~ (D) Make a Deposit (Credit)");
+                System.out.println("\t~ (P) Make a Payment (Debit)");
+                System.out.println("\t~ (L) View Ledger");
+                System.out.println("\t~ (X) Exit application");
 
             homeInput = scanner.next().toUpperCase().trim();
 
             switch (homeInput){
 
                 case "D":
-                    System.out.println("You have selected 'Add Deposit'.");
-                        Deposit.addDeposit();
+                        Deposit.makeDeposit();
                     break;
 
                 case "P":
-                    System.out.println("You have selected 'Make a Payment (Debit)'.");
-                    Payment.makeDebitPayment();
+                    Payment.makePayment();
                     break;
 
                 case "L":
-                    System.out.println("You have selected 'View Ledger'.");
                     Ledger.checkLedger();
                     break;
 
                 case "X":
-                    System.out.println("Exiting program... Have a nice day!");
+                    System.out.println("       *  Exiting program...  *");
+                    System.out.println("       --  Have a nice day!  --");
                     break;
 
                 default:
-                    System.out.println("Command not found. Please select one of the options and try again.");
+                    System.out.println("       ** Command not found **");
+                    System.out.println("        - Please try again -");
                     break;
             }
 

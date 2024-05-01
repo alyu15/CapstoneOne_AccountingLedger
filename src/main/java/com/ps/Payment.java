@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Payment {
 
-    public static void makeDebitPayment(){
+    public static void makePayment(){
 
         Scanner scanner = new Scanner(System.in);
         String paymentReason;
@@ -20,15 +20,16 @@ public class Payment {
         LocalDate dateNow = LocalDate.now();
         LocalTime timeNow = LocalTime.now();
 
-        System.out.println("\nPlease enter in the reason for this payment:");
-            paymentReason = scanner.nextLine();
+        System.out.println("       --  Make a Payment  --       ");
+            System.out.println("\nPlease enter in the reason for this payment:");
+                paymentReason = scanner.nextLine();
 
-        System.out.println("Please enter in the vendor name:");
-            payVendorName = scanner.nextLine();
-            vendorEntry = payVendorName.substring(0,1).toUpperCase()+payVendorName.substring(1);
+            System.out.println("Please enter in the vendor name:");
+                payVendorName = scanner.nextLine();
+                vendorEntry = payVendorName.substring(0,1).toUpperCase()+payVendorName.substring(1);
 
-        System.out.println("Please enter in the amount you would like to pay:");
-            paymentAmount = scanner.nextFloat();
+            System.out.println("Please enter in the amount you would like to pay:");
+                paymentAmount = scanner.nextFloat();
 
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
             String formattedTime = timeNow.format(timeFormatter);
