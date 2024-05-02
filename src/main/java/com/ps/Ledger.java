@@ -81,33 +81,6 @@ public class Ledger {
 
     }
 
-//    public static void readTransactions(ArrayList<Transaction> transactionsList) {
-//
-//        try {
-//            BufferedReader buffReader = new BufferedReader(new FileReader("transactions.txt"));
-//            String file;
-//            while ((file = buffReader.readLine()) != null) {
-//
-//                String[] splitFile = file.split("\\|");
-//                LocalDate date = LocalDate.parse(splitFile[0]);
-//                LocalTime time = LocalTime.parse(splitFile[1]);
-//                String description = splitFile[2];
-//                String vendor = splitFile[3];
-//                float amount = Float.parseFloat(splitFile[4]);
-//
-//                Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
-//
-//                transactionsList.add(tempTransactions);
-//            }
-//            Collections.reverse(transactionsList);
-//
-//        } catch (IOException e) {
-//            System.out.println("Error!!");
-//            e.printStackTrace();
-//        }
-//
-//    }
-
     public static void displayAll(ArrayList<Transaction> transactionsList){
 
         System.out.println("                      --  Deposits and Payments  --\n");

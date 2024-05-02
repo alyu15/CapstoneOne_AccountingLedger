@@ -1,8 +1,5 @@
 package com.ps;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -14,30 +11,10 @@ public class Reports {
 
     public static void loadReports(ArrayList<Transaction> transactionsList) {
 
+        Collections.reverse(transactionsList);
+
         System.out.println("\nWelcome to your Accounts Reports!");
         System.out.println("What would you like to do?");
-
-        try {
-            BufferedReader buffReader = new BufferedReader(new FileReader("transactions.txt"));
-            String file;
-            while ((file = buffReader.readLine()) != null) {
-
-                String[] splitFile = file.split("\\|");
-                LocalDate date = LocalDate.parse(splitFile[0]);
-                LocalTime time = LocalTime.parse(splitFile[1]);
-                String description = splitFile[2];
-                String vendor = splitFile[3];
-                float amount = Float.parseFloat(splitFile[4]);
-
-                Transaction tempTransactions = new Transaction(date, time, description, vendor, amount);
-
-                transactionsList.add(tempTransactions);
-            }
-
-        } catch (IOException e) {
-            System.out.println("Error!!");
-            e.printStackTrace();
-        }
 
         String reportsInput;
 
@@ -74,9 +51,11 @@ public class Reports {
                 case "5":
                     searchVendor(transactionsList);
                     break;
+
                 case "6":
                     customSearch(transactionsList);
                     break;
+
                 case "0":
                     System.out.println("  --  Welcome back to your Accounts Ledger!  --");
                     break;
@@ -109,10 +88,8 @@ public class Reports {
                         transactions.getDescription(),
                         transactions.getVendor(),
                         transactions.getAmount());
-                break;
             }
-        }
-        if (!mRecord) {
+        } if (!mRecord) {
             System.out.println("          ** Could not find any transactions **");
             System.out.println("                 - Please try again -");
         }
@@ -142,11 +119,11 @@ public class Reports {
                         transactions.getVendor(),
                         transactions.getAmount());
             }
-            if (!pRecord) {
-                System.out.println("          ** Could not find any transactions **");
-                System.out.println("                 - Please try again -");
-            }
+        } if (!pRecord) {
+            System.out.println("          ** Could not find any transactions **");
+            System.out.println("                 - Please try again -");
         }
+
     }
 
     public static void yearToDate(ArrayList<Transaction> transactionsList) {
@@ -171,10 +148,9 @@ public class Reports {
                         transactions.getVendor(),
                         transactions.getAmount());
             }
-            if (!yRecord) {
-                System.out.println("          ** Could not find any transactions **");
-                System.out.println("                 - Please try again -");
-            }
+        } if (!yRecord) {
+            System.out.println("          ** Could not find any transactions **");
+            System.out.println("                 - Please try again -");
         }
     }
 
@@ -201,10 +177,9 @@ public class Reports {
                             transactions.getVendor(),
                             transactions.getAmount());
                 }
-                if (!pYRecord) {
-                    System.out.println("          ** Could not find any transactions **");
-                    System.out.println("                 - Please try again -");
-                }
+            } if (!pYRecord) {
+                System.out.println("          ** Could not find any transactions **");
+                System.out.println("                 - Please try again -");
             }
         }
 
@@ -231,8 +206,7 @@ public class Reports {
                             vendorSearch.getVendor(),
                             vendorSearch.getAmount());
                 }
-            }
-            if (!vendorFound) {
+            } if (!vendorFound) {
                 System.out.println("              ** Could not find vendor **");
                 System.out.println("                 - Please try again -    ");
             }
