@@ -22,11 +22,11 @@ public class Deposit {
             System.out.println("\nPlease enter in the reason for this deposit:");
                 reason = scanner.nextLine();
 
-            System.out.println("Please enter in the vendor name:");
+            System.out.println("* Please enter in the vendor name:");
                 vendorName = scanner.nextLine();
                 nameEntry = vendorName.substring(0,1).toUpperCase()+vendorName.substring(1);
 
-            System.out.println("Please enter in the amount you would like to deposit:");
+            System.out.println("* Please enter in the amount you would like to deposit:");
                 depositAmount = scanner.nextFloat();
 
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
@@ -51,6 +51,6 @@ public class Deposit {
             e.printStackTrace();
         }
 
-        System.out.println("You have successfully made a deposit!");
+        System.out.println("        ** You have successfully made a deposit! **");
     }
 }

@@ -1,7 +1,6 @@
 package com.ps;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -13,20 +12,20 @@ public class Reports {
 
         Collections.reverse(transactionsList);
 
-        System.out.println("\nWelcome to your Accounts Reports!");
-        System.out.println("What would you like to do?");
+        System.out.println("\n    *  Welcome to your Accounts Reports!  *  ");
+        System.out.println("         -- What would you like to do? --  ");
 
         String reportsInput;
 
         do {
-            System.out.println("\nPlease select one of the following Reports you would like to view:");
-            System.out.println("\t(1) Month to Date");
-            System.out.println("\t(2) Previous Month");
-            System.out.println("\t(3) Year to Date");
-            System.out.println("\t(4) Previous Year");
-            System.out.println("\t(5) Search by Vendor");
-            System.out.println("\t(6) Custom Search");
-            System.out.println("\t(0) Return to Ledger");
+            System.out.println("\n* Please select one of the following Reports you would like to view:");
+            System.out.println("\t~ (1) Month to Date");
+            System.out.println("\t~ (2) Previous Month");
+            System.out.println("\t~ (3) Year to Date");
+            System.out.println("\t~ (4) Previous Year");
+            System.out.println("\t~ (5) Search by Vendor");
+            System.out.println("\t~ (6) Custom Search");
+            System.out.println("\t~ (0) Return to Ledger");
 
             reportsInput = scanner.nextLine().trim();
 
@@ -71,9 +70,9 @@ public class Reports {
 
         boolean mRecord = false;
 
-        System.out.println("             ** Month to Date Report **");
-        System.out.println("                  - Transactions -");
-        System.out.println("  * Date -- Time -- Description -- Vendor -- Amount *\n");
+        System.out.println("                  ** Month to Date Report **");
+        System.out.println("                       - Transactions -");
+        System.out.println("       * Date -- Time -- Description -- Vendor -- Amount *\n");
 
         for (Transaction transactions : transactionsList) {
 
@@ -99,9 +98,9 @@ public class Reports {
 
         boolean pRecord = false;
 
-        System.out.println("              ** Previous Month Report **");
-        System.out.println("                   - Transactions -");
-        System.out.println("   * Date -- Time -- Description -- Vendor -- Amount *\n");
+        System.out.println("                  ** Previous Month Report **");
+        System.out.println("                       - Transactions -");
+        System.out.println("       * Date -- Time -- Description -- Vendor -- Amount *\n");
 
         for (Transaction transactions : transactionsList) {
 
@@ -130,9 +129,9 @@ public class Reports {
 
         boolean yRecord = false;
 
-        System.out.println("              ** Year to Date Report **");
-        System.out.println("                  - Transactions -");
-        System.out.println("  * Date -- Time -- Description -- Vendor -- Amount *\n");
+        System.out.println("                   ** Year to Date Report **");
+        System.out.println("                       - Transactions -");
+        System.out.println("       * Date -- Time -- Description -- Vendor -- Amount *\n");
 
         for (Transaction transactions : transactionsList) {
 
@@ -158,9 +157,9 @@ public class Reports {
 
             boolean pYRecord = false;
 
-            System.out.println("              ** Previous Year Report **");
-            System.out.println("                  - Transactions -");
-            System.out.println("  * Date -- Time -- Description -- Vendor -- Amount *\n");
+            System.out.println("                   ** Previous Year Report **");
+            System.out.println("                       - Transactions -");
+            System.out.println("       * Date -- Time -- Description -- Vendor -- Amount *\n");
 
             for (Transaction transactions : transactionsList) {
 
@@ -193,6 +192,7 @@ public class Reports {
             String vendorOutput = vendorInput.substring(0, 1).toUpperCase() + vendorInput.substring(1);
 
             System.out.println("                       --  Vendor Result  --");
+            System.out.println("                         - Transactions -");
             System.out.println("         * Date -- Time -- Description -- Vendor -- Amount *\n");
 
             for (Transaction vendorSearch : transactionsList) {
