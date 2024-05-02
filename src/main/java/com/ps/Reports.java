@@ -188,8 +188,8 @@ public class Reports {
 
             System.out.println("* Please enter in the vendor name:");
             vendorInput = scanner.nextLine().trim();
-            boolean vendorFound = false;
             String vendorOutput = vendorInput.substring(0, 1).toUpperCase() + vendorInput.substring(1);
+            boolean vendorFound = false;
 
             System.out.println("                       --  Vendor Result  --");
             System.out.println("                         - Transactions -");
