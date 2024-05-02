@@ -85,14 +85,14 @@ public class Ledger {
 
         System.out.println("                      --  Deposits and Payments  --\n");
 
-        for (Transaction file: transactionsList) {
+        for (Transaction dispAll: transactionsList) {
 
             System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
-                    file.getDate(),
-                    file.getTime(),
-                    file.getDescription(),
-                    file.getVendor(),
-                    file.getAmount());
+                    dispAll.getDate(),
+                    dispAll.getTime(),
+                    dispAll.getDescription(),
+                    dispAll.getVendor(),
+                    dispAll.getAmount());
         }
     }
 
@@ -100,15 +100,15 @@ public class Ledger {
 
         System.out.println("                             --  Deposits  --\n");
 
-        for (Transaction file: transactionsList) {
+        for (Transaction deposit: transactionsList) {
 
-            if (file.getAmount() > 0) {
+            if (deposit.getAmount() > 0) {
                 System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
-                        file.getDate(),
-                        file.getTime(),
-                        file.getDescription(),
-                        file.getVendor(),
-                        file.getAmount());
+                        deposit.getDate(),
+                        deposit.getTime(),
+                        deposit.getDescription(),
+                        deposit.getVendor(),
+                        deposit.getAmount());
             }
         }
     }
@@ -117,15 +117,15 @@ public class Ledger {
 
         System.out.println("                            --  Payments  --\n");
 
-        for (Transaction file: transactionsList) {
+        for (Transaction payment: transactionsList) {
 
-            if (file.getAmount() < 0) {
+            if (payment.getAmount() < 0) {
                 System.out.printf("~ %s -- %s  --  '%s' --  Vendor: %s  --  Amount: %.2f\n",
-                        file.getDate(),
-                        file.getTime(),
-                        file.getDescription(),
-                        file.getVendor(),
-                        file.getAmount());
+                        payment.getDate(),
+                        payment.getTime(),
+                        payment.getDescription(),
+                        payment.getVendor(),
+                        payment.getAmount());
             }
         }
     }

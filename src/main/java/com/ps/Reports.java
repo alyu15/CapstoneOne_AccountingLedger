@@ -19,13 +19,13 @@ public class Reports {
 
         do {
             System.out.println("\n* Please select one of the following Reports you would like to view:");
-            System.out.println("\t~ (1) Month to Date");
-            System.out.println("\t~ (2) Previous Month");
-            System.out.println("\t~ (3) Year to Date");
-            System.out.println("\t~ (4) Previous Year");
-            System.out.println("\t~ (5) Search by Vendor");
-            System.out.println("\t~ (6) Custom Search");
-            System.out.println("\t~ (0) Return to Ledger");
+                System.out.println("\t~ (1) Month to Date");
+                System.out.println("\t~ (2) Previous Month");
+                System.out.println("\t~ (3) Year to Date");
+                System.out.println("\t~ (4) Previous Year");
+                System.out.println("\t~ (5) Search by Vendor");
+                System.out.println("\t~ (6) Custom Search");
+                System.out.println("\t~ (0) Return to Ledger");
 
             reportsInput = scanner.nextLine().trim();
 

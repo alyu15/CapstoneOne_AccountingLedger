@@ -8,8 +8,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Transaction> transactionsList = new ArrayList<>();
 
-        System.out.println("\n  *  Welcome to our Accounting Ledger program!   *");
-            System.out.println("          --  How may we help you?  --");
+        System.out.println("\n  *  Welcome to our World Famous Accounting Ledger program!   *");
+            System.out.println("              --  How may we help you?  --");
 
         String homeInput;
         do {
