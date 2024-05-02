@@ -12,6 +12,7 @@ public class Deposit {
 
         Scanner scanner = new Scanner(System.in);
         String reason;
+        String reasonEntry;
         String vendorName;
         String nameEntry;
         float depositAmount;
@@ -21,6 +22,7 @@ public class Deposit {
         System.out.println("       --  Make a Deposit  --       ");
             System.out.println("\nPlease enter in the reason for this deposit:");
                 reason = scanner.nextLine();
+                reasonEntry = reason.substring(0,1).toUpperCase()+reason.substring(1);
 
             System.out.println("* Please enter in the vendor name:");
                 vendorName = scanner.nextLine();
@@ -39,7 +41,7 @@ public class Deposit {
             String data = String.format("\n%s|%s|%s|%s|%.2f",
                     dateNow,
                     formattedTime,
-                    reason,
+                    reasonEntry,
                     nameEntry,
                     depositAmount);
 

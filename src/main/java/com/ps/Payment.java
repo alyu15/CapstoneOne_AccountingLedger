@@ -14,6 +14,7 @@ public class Payment {
 
         Scanner scanner = new Scanner(System.in);
         String paymentReason;
+        String pReasonEntry;
         String payVendorName;
         String vendorEntry;
         float paymentAmount;
@@ -23,6 +24,7 @@ public class Payment {
         System.out.println("       --  Make a Payment  --       ");
             System.out.println("\n* Please enter in the reason for this payment:");
                 paymentReason = scanner.nextLine();
+                pReasonEntry = paymentReason.substring(0,1).toUpperCase()+paymentReason.substring(1);
 
             System.out.println("* Please enter in the vendor name:");
                 payVendorName = scanner.nextLine();
@@ -41,7 +43,7 @@ public class Payment {
             String data = String.format("\n%s|%s|%s|%s|-%.2f",
                     dateNow,
                     formattedTime,
-                    paymentReason,
+                    pReasonEntry,
                     vendorEntry,
                     paymentAmount);
 
