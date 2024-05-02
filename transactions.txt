@@ -13,5 +13,5 @@
 2024-04-27|09:15:28|Bonus deposit|Salaryman|550.50
 2024-04-28|11:03:59|Groceries|Hmart|-107.85
 2024-05-01|12:57:21|Brunch with friends|Yumyums|-58.45
-2024-05-02|10:42:51|testing|Amazon|100.00
-2024-05-02|11:00:16|testing|Amazon|-100.00
+2024-05-02|10:42:51|Testing|Amazon|100.00
+2024-05-02|11:00:16|Testing|Amazon|-100.00

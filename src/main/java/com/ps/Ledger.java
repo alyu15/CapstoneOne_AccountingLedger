@@ -44,7 +44,7 @@ public class Ledger {
         do {
 
             System.out.println("\n* Please select one of the following options:");
-                System.out.println("\t~ (A) Display all entries");
+                System.out.println("\t~ (A) View all transactions");
                 System.out.println("\t~ (D) View Deposits");
                 System.out.println("\t~ (P) View Payments");
                 System.out.println("\t~ (R) View Reports");
