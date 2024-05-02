@@ -38,8 +38,12 @@ public class Payment {
 
             BufferedWriter buffWriter = new BufferedWriter(new FileWriter("transactions.txt", true));
 
-            String data = "\n" + dateNow + "|" + formattedTime + "|" + paymentReason
-                    + "|" + vendorEntry + "|-" + paymentAmount;
+            String data = String.format("\n%s|%s|%s|%s|-%.2f",
+                    dateNow,
+                    formattedTime,
+                    paymentReason,
+                    vendorEntry,
+                    paymentAmount);
 
             buffWriter.write(data);
             buffWriter.close();

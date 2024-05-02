@@ -36,8 +36,12 @@ public class Deposit {
 
             BufferedWriter buffWriter = new BufferedWriter(new FileWriter("transactions.txt", true));
 
-            String data = "\n" + dateNow + "|" + formattedTime + "|" + reason
-                    + "|" + nameEntry + "|" + depositAmount;
+            String data = String.format("\n%s|%s|%s|%s|%.2f",
+                    dateNow,
+                    formattedTime,
+                    reason,
+                    nameEntry,
+                    depositAmount);
 
             buffWriter.write(data);
             buffWriter.close();

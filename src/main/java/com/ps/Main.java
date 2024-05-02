@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        ArrayList<Transaction> transactionsList = new ArrayList<>();
 
         System.out.println("\n  *  Welcome to our Accounting Ledger program!   *");
             System.out.println("          --  How may we help you?  --");
@@ -23,7 +24,7 @@ public class Main {
             switch (homeInput){
 
                 case "D":
-                        Deposit.makeDeposit();
+                    Deposit.makeDeposit();
                     break;
 
                 case "P":
@@ -31,7 +32,7 @@ public class Main {
                     break;
 
                 case "L":
-                    Ledger.checkLedger();
+                    Ledger.checkLedger(transactionsList);
                     break;
 
                 case "X":
