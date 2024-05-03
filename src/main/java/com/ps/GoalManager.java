@@ -127,7 +127,7 @@ public class GoalManager {
 
         for (FinancialGoal trackGoal : goalsList) {
 
-            double remaining = Math.abs(trackGoal.getTargetAmount() - trackGoal.getCurrentAmount());
+            double remaining = trackGoal.getTargetAmount() - trackGoal.getCurrentAmount();
             String formattedDate = dateFormat.format(trackGoal.getTargetDate());
 
             System.out.printf("~ '%s' -- Current Amount: $%.2f -- Target Amount: $%.2f -- Remaining Amount: $%.2f -- Target Date: %s\n",

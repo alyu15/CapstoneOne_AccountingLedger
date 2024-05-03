@@ -5,14 +5,14 @@ import java.util.Date;
 public class FinancialGoal {
 
     private String reason;
-    private double targetAmount;
     private double currentAmount;
+    private double targetAmount;
     private Date targetDate;
 
-    public FinancialGoal(String reason, double targetAmount, double currentAmount, Date targetDate) {
+    public FinancialGoal(String reason, double currentAmount, double targetAmount, Date targetDate) {
         this.reason = reason;
-        this.targetAmount = targetAmount;
         this.currentAmount = currentAmount;
+        this.targetAmount = targetAmount;
         this.targetDate = targetDate;
     }
 
@@ -24,20 +24,20 @@ public class FinancialGoal {
         this.reason = reason;
     }
 
-    public double getTargetAmount() {
-        return targetAmount;
-    }
-
-    public void setTargetAmount(double targetAmount) {
-        this.targetAmount = targetAmount;
-    }
-
     public double getCurrentAmount() {
         return currentAmount;
     }
 
     public void setCurrentAmount(double currentAmount) {
         this.currentAmount = currentAmount;
+    }
+
+    public double getTargetAmount() {
+        return targetAmount;
+    }
+
+    public void setTargetAmount(double targetAmount) {
+        this.targetAmount = targetAmount;
     }
 
     public Date getTargetDate() {
@@ -52,8 +52,8 @@ public class FinancialGoal {
     public String toString() {
         return "FinancialGoal{" +
                 "reason='" + reason + '\'' +
-                ", targetAmount=" + targetAmount +
                 ", currentAmount=" + currentAmount +
+                ", targetAmount=" + targetAmount +
                 ", targetDate=" + targetDate +
                 '}';
     }
