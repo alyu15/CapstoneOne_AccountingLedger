@@ -18,7 +18,7 @@ With this application, the user will be able to track all their financial transa
 ><details>
 ><summary> Welcome Screen </summary>
 >
->[![HomeScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/HomeScreen.PNG)
+>![HomeScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/HomeScreen.PNG)
 ></details>
 
 ><details>
@@ -34,7 +34,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> Making a Deposit </summary>
 >>
->>[![Deposits.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/Deposits.PNG)
+>>![Deposits.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/Deposits.PNG)
 >></details>
 ></details>
 
@@ -51,7 +51,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> Making a Payment </summary>
 >>
->>[![Payments.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/Payments.PNG)
+>>![Payments.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/Payments.PNG)
 >></details>
 ></details>
 
@@ -63,7 +63,7 @@ With this application, the user will be able to track all their financial transa
 ><details>
 ><summary> Financial Goals Screen </summary>
 >
->[![FinancialGoalsScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/FinancialGoalsScreen.PNG)
+>![FinancialGoalsScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/FinancialGoalsScreen.PNG)
 ></details>
 
 ><details>
@@ -79,7 +79,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> Create a New Goal </summary>
 >>
->>[![CreatingGoal.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/CreatingGoal.PNG)
+>>![CreatingGoal.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/CreatingGoal.PNG)
 >></details>
 >
 ></details>
@@ -92,7 +92,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> Viewing Current Goals</summary>
 >>
->>[![ViewGoals.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/f65073faaed1cefa29f885509ebb7f6c81638179/images/ViewGoals.PNG)
+>>![ViewGoals.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/f65073faaed1cefa29f885509ebb7f6c81638179/images/ViewGoals.PNG)
 >></details>
 ></details>
 
@@ -107,7 +107,7 @@ With this application, the user will be able to track all their financial transa
 ><details>
 ><summary> Ledger Screen </summary>
 >
->[![LedgerScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/LedgerScreen.PNG)
+>![LedgerScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/LedgerScreen.PNG)
 ></details>
 
 ><details>
@@ -120,7 +120,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> All Transactions </summary>
 >>
->>[![DisplayAll.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/DisplayAll.PNG)
+>>![DisplayAll.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/DisplayAll.PNG)
 >></details>
 ></details>
 
@@ -132,7 +132,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> All Deposits </summary>
 >>
->>[![ViewDeposits.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ViewDeposits.PNG)
+>>![ViewDeposits.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ViewDeposits.PNG)
 >></details>
 >></details>
 
@@ -144,7 +144,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> All Payments </summary>
 >>
->>[![ViewPayments.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/main/images/ViewPayments.PNG)
+>>![ViewPayments.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/main/images/ViewPayments.PNG)
 >></details>
 ></details>
 
@@ -161,7 +161,7 @@ With this application, the user will be able to track all their financial transa
 ><details>
 ><summary> Reports Screen </summary>
 >
->[![ReportsScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ReportsScreen.PNG)
+>![ReportsScreen.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ReportsScreen.PNG)
 ></details>
 
 ><details> 
@@ -171,7 +171,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> View Month to Date </summary>
 >>
->>[![MTD.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/MTD.PNG)
+>>![MTD.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/MTD.PNG)
 >></details>
 ></details>
 
@@ -182,7 +182,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> View Previous Month </summary>
 >>
->>[![PreviousMonth.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/PreviousMonth.PNG)
+>>![PreviousMonth.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/PreviousMonth.PNG)
 >></details>
 ></details>
 
@@ -193,7 +193,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> View Year to Date </summary>
 >>
->>[![YTD.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/YTD.PNG)
+>>![YTD.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/YTD.PNG)
 >></details>
 ></details>
 
@@ -204,7 +204,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> View Previous Year </summary>
 >>
->>[![PreviousYear.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/PreviousYear.PNG)
+>>![PreviousYear.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/PreviousYear.PNG)
 >></details>
 ></details>
 
@@ -216,7 +216,7 @@ With this application, the user will be able to track all their financial transa
 >><details>
 >><summary> Searching by Vendor </summary>
 >>
->>[![VendorSearch.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/VendorSearch.PNG)
+>>![VendorSearch.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/VendorSearch.PNG)
 >></details>
 ></details>
 
@@ -248,29 +248,29 @@ oneself to achieving their financial goals.
 ><details>
 ><summary> Invalid Home Screen Selection </summary>
 >
->[![ErrorHandling1.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling1.PNG)
+>![ErrorHandling1.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling1.PNG)
 ></details>
 
 ><details>
 ><summary> Invalid Ledger Screen Selection </summary>
 >
-> [![ErrorHandling4.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling4.PNG)
+> ![ErrorHandling4.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling4.PNG)
 ></details>
 
 ><details>
 ><summary> Invalid Reports Selection </summary>
 >
->[![ErrorHandling3.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling3.PNG)
+>![ErrorHandling3.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling3.PNG)
 ></details>
 
 ><details>
 ><summary> Invalid Vendor Search Input </summary>
 >
->[![ErrorHandling2.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling2.PNG)
+>![ErrorHandling2.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling2.PNG)
 ></details>
 
 ><details>
 ><summary> Invalid Financial Goals Screen Selection </summary>
 >
->[![ErrorHandling5.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling5.PNG)
+>![ErrorHandling5.PNG](https://github.com/alyu15/CapstoneOne_AccountingLedger/blob/94da9a35d5de2b616e6a761fc5b36a909233e2cd/images/ErrorHandling5.PNG)
 ></details>
