@@ -84,8 +84,8 @@ public class Reports {
                         transactions.getAmount());
             }
         } if (!mRecord) {
-            System.out.println("          ** Could not find any transactions **");
-            System.out.println("                 - Please try again -");
+            System.out.println("              ** Could not find any transactions **");
+            System.out.println("                     - Please try again -");
         }
     }
 
@@ -202,8 +202,8 @@ public class Reports {
                             vendorSearch.getAmount());
                 }
             } if (!vendorFound) {
-                System.out.println("              ** Could not find vendor **");
-                System.out.println("                 - Please try again -    ");
+                System.out.println("                    ** Could not find vendor **");
+                System.out.println("                        - Please try again -    ");
             }
 
         }

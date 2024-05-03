@@ -50,7 +50,7 @@ public class Deposit {
         }
         catch (IOException e) {
             System.out.println("Error!!");
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         System.out.println("        ** You have successfully made a deposit! **");

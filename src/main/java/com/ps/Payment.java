@@ -52,7 +52,7 @@ public class Payment {
         }
         catch (IOException e) {
             System.out.println("Error!!");
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         System.out.println("        ** You have successfully made a payment! **");

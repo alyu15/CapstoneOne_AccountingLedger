@@ -39,6 +39,8 @@ public class GoalManager {
                     break;
 
                 default:
+                    System.out.println("       -- Command not found --");
+                    System.out.println("        * Please try again    ");
                     break;
             }
 
@@ -118,7 +120,7 @@ public class GoalManager {
             }
         } catch (IOException e) {
             System.err.println("Error!!");
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

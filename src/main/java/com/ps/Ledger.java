@@ -35,7 +35,7 @@ public class Ledger {
 
         } catch (IOException e) {
             System.out.println("Error!!");
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         System.out.println("\n    *  Welcome to your Accounts Ledger!  *  ");
