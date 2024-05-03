@@ -24,7 +24,6 @@ public class Reports {
                 System.out.println("\t~ (3) Year to Date");
                 System.out.println("\t~ (4) Previous Year");
                 System.out.println("\t~ (5) Search by Vendor");
-                System.out.println("\t~ (6) Custom Search");
                 System.out.println("\t~ (0) Return to Ledger");
 
             reportsInput = scanner.nextLine().trim();
@@ -49,10 +48,6 @@ public class Reports {
 
                 case "5":
                     searchVendor(transactionsList);
-                    break;
-
-                case "6":
-                    customSearch(transactionsList);
                     break;
 
                 case "0":
@@ -153,7 +148,7 @@ public class Reports {
         }
     }
 
-        public static void previousYear (ArrayList < Transaction > transactionsList) {
+        public static void previousYear (ArrayList<Transaction> transactionsList) {
 
             boolean pYRecord = false;
 
@@ -212,13 +207,6 @@ public class Reports {
             }
 
         }
-
-        public static void customSearch (ArrayList<Transaction> transactionsList) {
-
-            System.out.println();
-
-        }
-
 
     }
 

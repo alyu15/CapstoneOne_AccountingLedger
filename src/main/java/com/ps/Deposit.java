@@ -20,7 +20,7 @@ public class Deposit {
         LocalTime timeNow = LocalTime.now();
 
         System.out.println("       --  Make a Deposit  --       ");
-            System.out.println("\nPlease enter in the reason for this deposit:");
+            System.out.println("\n* Please enter in the reason for this deposit:");
                 reason = scanner.nextLine();
                 reasonEntry = reason.substring(0,1).toUpperCase()+reason.substring(1);
 

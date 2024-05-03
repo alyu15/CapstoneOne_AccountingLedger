@@ -8,8 +8,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Transaction> transactionsList = new ArrayList<>();
 
-        System.out.println("\n  *  Welcome to our World Famous Accounting Ledger program!   *");
-            System.out.println("              --  How may we help you?  --");
+        System.out.println("\n      *  Welcome to our World Famous Accounting Ledger program!   *");
+            System.out.println("                 --  How may we help you?  --");
 
         String homeInput;
         do {
@@ -17,6 +17,7 @@ public class Main {
                 System.out.println("\t~ (D) Make a Deposit (Credit)");
                 System.out.println("\t~ (P) Make a Payment (Debit)");
                 System.out.println("\t~ (L) View Ledger");
+                System.out.println("\t~ (G) Manage Financial Goals");
                 System.out.println("\t~ (X) Exit application");
 
             homeInput = scanner.next().toUpperCase().trim();
@@ -33,6 +34,10 @@ public class Main {
 
                 case "L":
                     Ledger.checkLedger(transactionsList);
+                    break;
+
+                case "G":
+                    GoalManager.goalManager();
                     break;
 
                 case "X":
